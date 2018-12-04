@@ -8,8 +8,8 @@
 
     <color name="colorAccent">#FFF</color>
 
-    <color name="simpletooltip_background">@color/colorAccent</color>
+    <color name="simpletooltip_background">#fff</color>
     <color name="simpletooltip_text">#96297c</color>
-    <color name="simpletooltip_arrow">@color/colorAccent</color>
+    <color name="simpletooltip_arrow">#fff</color>
 
 </resources>
