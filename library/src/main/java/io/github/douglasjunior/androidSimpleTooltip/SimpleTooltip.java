@@ -314,6 +314,7 @@ public class SimpleTooltip implements PopupWindow.OnDismissListener {
         mContentView.setLayoutParams(contentViewParams);
 
         mContentLayout = linearLayout;
+
         mContentLayout.setVisibility(View.INVISIBLE);
         mPopupWindow.setContentView(mContentLayout);
     }
@@ -565,7 +566,7 @@ public class SimpleTooltip implements PopupWindow.OnDismissListener {
         private OnDismissListener onDismissListener;
         private OnShowListener onShowListener;
         private long animationDuration;
-        private int backgroundColor;
+        private int backgroundColor = Color.WHITE;
         private int textColor;
         private int arrowColor;
         private float arrowHeight;
@@ -583,13 +584,13 @@ public class SimpleTooltip implements PopupWindow.OnDismissListener {
 
         public SimpleTooltip build() throws IllegalArgumentException {
             validateArguments();
-            if (backgroundColor == 0) {
-                backgroundColor = SimpleTooltipUtils.getColor(context, mDefaultBackgroundColorRes);
-            }
+           // if (backgroundColor == 0) {
+           //     backgroundColor = SimpleTooltipUtils.getColor(context, mDefaultBackgroundColorRes);
+            //}
 
-            if (overlayWindowBackgroundColor == 0) {
-                overlayWindowBackgroundColor = Color.BLACK;
-            }
+            //if (overlayWindowBackgroundColor == 0) {
+            //    overlayWindowBackgroundColor = Color.BLACK;
+           // }
 
             if (textColor == 0) {
                 textColor = SimpleTooltipUtils.getColor(context, mDefaultTextColorRes);
@@ -637,6 +638,7 @@ public class SimpleTooltip implements PopupWindow.OnDismissListener {
             if (overlayOffset < 0) {
                 overlayOffset = context.getResources().getDimension(mDefaultOverlayOffsetRes);
             }
+
             return new SimpleTooltip(this);
         }
 
@@ -959,7 +961,7 @@ public class SimpleTooltip implements PopupWindow.OnDismissListener {
         }
 
         public Builder backgroundColor(@ColorInt int backgroundColor) {
-            this.backgroundColor = backgroundColor;
+            this.backgroundColor = Color.WHITE;
             return this;
         }
 
