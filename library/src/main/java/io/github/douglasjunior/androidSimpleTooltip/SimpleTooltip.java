@@ -600,7 +600,7 @@ public class SimpleTooltip implements PopupWindow.OnDismissListener {
                 SimpleTooltipUtils.setTextAppearance(tv, mDefaultTextAppearanceRes);
                 tv.setBackground( context.getResources().getDrawable(R.drawable.bg));
                 tv.setTextColor(textColor);
-                tv.setTextSize(context.getResources().getDimension(R.dimen.textsize));
+                tv.setTextSize(context.getResources().getDimension(R.dimen.simpletooltip_textsize));
 
                 contentView = tv;
             }
