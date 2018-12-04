@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (v.getId() == R.id.btn_outside) {
             new SimpleTooltip.Builder(this)
                     .anchorView(v)
-                    .text(R.string.btn_outside)
+                    .text("testasdasd  asdas d")
                     .gravity(Gravity.BOTTOM)
                     .dismissOnOutsideTouch(true)
                     .dismissOnInsideTouch(false)

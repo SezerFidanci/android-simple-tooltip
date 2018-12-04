@@ -252,8 +252,8 @@ public class SimpleTooltip implements PopupWindow.OnDismissListener {
                 location.y = anchorRect.top - mPopupWindow.getContentView().getHeight() - mMargin;
                 break;
             case Gravity.BOTTOM:
-                location.x = anchorCenter.x - mPopupWindow.getContentView().getWidth() / 2f;
-                location.y = anchorRect.bottom + mMargin;
+                location.x =anchorRect.right-mPopupWindow.getContentView().getWidth()  - mMargin;
+                location.y = anchorRect.bottom;
                 break;
             case Gravity.CENTER:
                 location.x = anchorCenter.x - mPopupWindow.getContentView().getWidth() / 2f;
@@ -423,10 +423,11 @@ public class SimpleTooltip implements PopupWindow.OnDismissListener {
                 if (mArrowDirection == ArrowDrawable.TOP || mArrowDirection == ArrowDrawable.BOTTOM) {
                     x = mContentLayout.getPaddingLeft() + SimpleTooltipUtils.pxFromDp(2);
                     float centerX = (contentViewRect.width() / 2f) - (mArrowView.getWidth() / 2f);
-                    float newX = centerX - (contentViewRect.centerX() - achorRect.centerX());
+                    float newX = centerX +achorRect.right;
+
                     if (newX > x) {
                         if (newX + mArrowView.getWidth() + x > contentViewRect.width()) {
-                            x = contentViewRect.width() - mArrowView.getWidth() - x;
+                            x = contentViewRect.width() - mArrowView.getWidth() ;
                         } else {
                             x = newX;
                         }
@@ -596,8 +597,10 @@ public class SimpleTooltip implements PopupWindow.OnDismissListener {
             if (contentView == null) {
                 TextView tv = new TextView(context);
                 SimpleTooltipUtils.setTextAppearance(tv, mDefaultTextAppearanceRes);
-                tv.setBackgroundColor(backgroundColor);
+                tv.setBackground( context.getResources().getDrawable(R.drawable.bg));
                 tv.setTextColor(textColor);
+                tv.setTextSize(context.getResources().getDimension(R.dimen.textsize));
+
                 contentView = tv;
             }
             if (arrowColor == 0) {

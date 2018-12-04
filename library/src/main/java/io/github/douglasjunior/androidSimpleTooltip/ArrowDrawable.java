@@ -49,7 +49,7 @@ public class ArrowDrawable extends ColorDrawable {
 
     ArrowDrawable(@ColorInt int foregroundColor, int direction) {
         this.mBackgroundColor = Color.TRANSPARENT;
-        this.mPaint.setColor(foregroundColor);
+        this.mPaint.setColor(Color.parseColor("#96297c"));
         this.mDirection = direction;
     }
 
@@ -83,7 +83,7 @@ public class ArrowDrawable extends ColorDrawable {
                 break;
             case BOTTOM:
                 mPath.moveTo(0, 0);
-                mPath.lineTo(bounds.width() / 2, bounds.height());
+                mPath.lineTo(bounds.width() , bounds.height());
                 mPath.lineTo(bounds.width(), 0);
                 mPath.lineTo(0, 0);
                 break;

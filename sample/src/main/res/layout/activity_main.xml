@@ -31,18 +31,18 @@
             android:paddingBottom="80dp">
 
             <Button
+                android:id="@+id/btn_outside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/btn_outside" />
+
+            <Button
                 android:id="@+id/btn_simple"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:text="@string/btn_simple" />
-
-            <Button
-                android:id="@+id/btn_animated"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/btn_animated" />
 
             <Button
                 android:id="@+id/btn_overlay"
@@ -59,11 +59,11 @@
                 android:text="@string/btn_maxwidth" />
 
             <Button
-                android:id="@+id/btn_outside"
+                android:id="@+id/btn_animated"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/btn_outside" />
+                android:text="@string/btn_animated" />
 
             <Button
                 android:id="@+id/btn_inside"
